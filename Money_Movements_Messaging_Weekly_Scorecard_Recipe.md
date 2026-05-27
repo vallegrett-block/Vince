@@ -13,7 +13,7 @@ This recipe automates the weekly refresh of the **Money Movements Messaging Week
 2. Determine the most recent completed week's Monday date (if today is Monday, use the prior week)
 3. Find which column corresponds to that week
 4. If the week's date doesn't exist yet, add it as a new header in the next empty column
-5. Only write data for the most recent completed week — never overwrite previously written weeks
+5. Only write data for the most recent completed week ‚Äî never overwrite previously written weeks
 
 ---
 
@@ -80,8 +80,8 @@ This recipe automates the weekly refresh of the **Money Movements Messaging Week
 **Sort:** cash_survey_results.in_period_parameter__survey_created
 
 **Output:**
-- **Row 3 (CSAT):** CSAT_greater_than_3 × 100 → format as "62.8%"
-- **Row 4 (Res Rate):** resolution_rate × 100 → format as "79.7%"
+- **Row 3 (CSAT):** CSAT_greater_than_3 √ó 100 ‚Üí format as "62.8%"
+- **Row 4 (Res Rate):** resolution_rate √ó 100 ‚Üí format as "79.7%"
 
 ---
 
@@ -108,7 +108,7 @@ This recipe automates the weekly refresh of the **Money Movements Messaging Week
 **Sort:** cash_support_cases.case_creation_week
 
 **Output:**
-- **Row 6 (FCR):** fcr_7_day_percent × 100 → format as "91.0%"
+- **Row 6 (FCR):** fcr_7_day_percent √ó 100 ‚Üí format as "91.0%"
 
 ---
 
@@ -129,7 +129,7 @@ This recipe automates the weekly refresh of the **Money Movements Messaging Week
 | employee_cash_dim.bpo_name | Concentrix |
 | employee_cash_dim.channel | Messaging |
 
-**Output:** complaint_flagging_rate × 100 → format as "17.3%"
+**Output:** complaint_flagging_rate √ó 100 ‚Üí format as "17.3%"
 
 ### ML Exception Rate (Row 8)
 
@@ -137,7 +137,7 @@ This recipe automates the weekly refresh of the **Money Movements Messaging Week
 
 Same filters as Row 7.
 
-**Output:** complaint_exception_rate × 100 → format as "6.8%"
+**Output:** complaint_exception_rate √ó 100 ‚Üí format as "6.8%"
 
 ---
 
@@ -165,7 +165,7 @@ Same filters as Row 7.
 | sdse_messaging_touches.is_overnight_worker | No,Yes |
 | employee_cash_dim.carto_region | Asia Pacific |
 
-**Output:** avg_qa_eval_score → format as "98.80%"
+**Output:** avg_qa_eval_score ‚Üí format as "98.80%"
 
 ---
 
@@ -195,9 +195,9 @@ Same filters as Row 7.
 | employee_cash_dim.carto_region | Asia Pacific |
 
 **Output:**
-- **Row 11:** avg_customer_section_score → format as "99.10%"
-- **Row 12:** avg_business_section_score → format as "96.65%"
-- **Row 13:** avg_compliance_section_score → format as "99.58%"
+- **Row 11:** avg_customer_section_score ‚Üí format as "99.10%"
+- **Row 12:** avg_business_section_score ‚Üí format as "96.65%"
+- **Row 13:** avg_compliance_section_score ‚Üí format as "99.58%"
 
 ---
 
@@ -224,7 +224,7 @@ Same filters as Row 7.
 | qa_scores_by_question_view.rubric_question_result | Yes,No,Pass,Fail |
 | dim_report_period_pst.period_name | 01 Day |
 
-**Calculation:** (Yes + Pass) / (Yes + Pass + No + Fail) × 100
+**Calculation:** (Yes + Pass) / (Yes + Pass + No + Fail) √ó 100
 
 **Note:** May return 0 rows for Money Movements. If so, leave Row 14 blank.
 
@@ -248,7 +248,7 @@ Same filters as Row 7.
 | employee_cash_dim.bpo_name | Concentrix |
 | employee_cash_dim.channel | Messaging |
 
-**Calculation:** ACKED / (ACKED + AWAITING_ACK + NOT_INITIATED) × 100
+**Calculation:** ACKED / (ACKED + AWAITING_ACK + NOT_INITIATED) √ó 100
 
 **Output:** format as "56.4%"
 
@@ -274,8 +274,8 @@ Same filters as Row 7.
 | employee_cash_dim.channel | Messaging |
 
 **Output:**
-- **Row 18 (AHT):** average_messaging_touch_lifetime (minutes) → format as "9.47"
-- **Row 21 (ATA):** average_messaging_assignment_to_action (minutes) → format as "0.83"
+- **Row 18 (AHT):** average_messaging_touch_lifetime (minutes) ‚Üí format as "9.47"
+- **Row 21 (ATA):** average_messaging_assignment_to_action (minutes) ‚Üí format as "0.83"
 
 ---
 
@@ -296,7 +296,7 @@ Same filters as Row 7.
 | employee_cash_dim.bpo_name | Concentrix |
 | employee_cash_dim.channel | Messaging |
 
-**Output:** average_active_case_lifetime_hours → format as "5.13"
+**Output:** average_active_case_lifetime_hours ‚Üí format as "5.13"
 
 ---
 
@@ -320,7 +320,7 @@ Same filters as Row 7.
 | employee_cash_dim.carto_region | Asia Pacific |
 | employee_cash_dim.channel | Messaging |
 
-**Output:** schedule_adherence × 100 → format as "98.1%"
+**Output:** schedule_adherence √ó 100 ‚Üí format as "98.1%"
 
 ---
 
@@ -370,9 +370,9 @@ Same filters as Row 7.
 | employee_cash_dim.carto_region | Asia Pacific |
 | cash_support_cases.is_overnight_worker_initial_touch | No |
 
-**⚠️ NOTE:** Do NOT include employee_cash_dim.channel filter (must be empty/absent).
+**‚ö†Ô∏è NOTE:** Do NOT include employee_cash_dim.channel filter (must be empty/absent).
 
-**Output:** transfer_accuracy × 100 → format as "98.5%"
+**Output:** transfer_accuracy √ó 100 ‚Üí format as "98.5%"
 
 ---
 
@@ -398,7 +398,7 @@ Same filters as Row 7.
 | employee_cash_dim.carto_region | Asia Pacific |
 | employee_cash_dim.channel | Messaging |
 
-**Output:** percent_messaging_touch_in_sla × 100 → format as "92.0%"
+**Output:** percent_messaging_touch_in_sla √ó 100 ‚Üí format as "92.0%"
 
 ---
 
@@ -422,8 +422,8 @@ WHERE c.ID IN (<case_ids>)
 3. Filter transactions to only those with house = "Messaging Money Movements" AND within target week
 
 **Output:**
-- **Row 31 (Refund Amount):** Sum of amounts → format as "$69.97"
-- **Row 32 (# High Adjustments $100+):** Count where amount > 100 → format as integer "0"
+- **Row 31 (Refund Amount):** Sum of amounts ‚Üí format as "$69.97"
+- **Row 32 (# High Adjustments $100+):** Count where amount > 100 ‚Üí format as integer "0"
 
 ---
 
@@ -435,8 +435,8 @@ WHERE c.ID IN (<case_ids>)
 **Filter:** week = target week AND house = "Messaging Money Movements" AND bpo = "Concentrix"
 
 **Output:**
-- **Row 33:** Sum of Total Negative Dollars → format as "$0.00"
-- **Row 34:** Count unique advocates with MORE THAN 5 voids that week → format as integer
+- **Row 33:** Sum of Total Negative Dollars ‚Üí format as "$0.00"
+- **Row 34:** Count unique advocates with MORE THAN 5 voids that week ‚Üí format as integer
 
 ---
 
@@ -463,7 +463,7 @@ Read Column D dynamically to get current targets.
 | GREEN | rgb(0.714, 0.839, 0.659) | value >= target | value <= target |
 | YELLOW | rgb(1.0, 0.851, 0.4) | value >= (target - 3) AND value < target | value <= (target + 3) AND value > target |
 | RED | rgb(0.918, 0.6, 0.6) | value < (target - 3) | value > (target + 3) |
-| WHITE | — | No data or no numeric target | No data or no numeric target |
+| WHITE | ‚Äî | No data or no numeric target | No data or no numeric target |
 
 ### Strict Zero Rule
 When target = 0 (e.g., Rows 23, 32, 34):
